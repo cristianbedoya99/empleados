@@ -17,38 +17,25 @@
                 <input type="email" class="span11" placeholder="Nombre" name="email">
               </div>
             </div>
-     
-       
-        <div class="form-control">
-          <input  type="radio" name="sexo" id="gridRadios1" value="M">
-          <label class="radio-inline" for="gridRadios1">
-          masculino
-          </label>
-        </div>
-        <div class="form-check">
-          <input  type="radio" name="sexo" id="gridRadios2" value="F">
-          <label class="radio-inline" for="gridRadios2">
-           femenino
-          </label>
-        </div>
-  
-
-
-
-
-
-
-
-
-
+        <div class="control-group">
+              <label class="control-label">Sexo</label>
+              <div class="controls">
+                <label>
+                  <div> <input type="radio" name="sexo" value="M"></div>
+                  Masculino</label>
+                <label>
+                  <div><span><input type="radio" name="sexo" value="F"></span></div>
+                 Femenino</label>
+              </div>
+            </div>
         <label class="control-label">Area</label>
         <div class="controls">
         <select name="area_id" style="select2">
         <option value="area_id">Seleccione </option>
                   <?php
           
-          foreach($Area as $Areas){
-          echo"<option value='".$areas['area_id']."'>".$Areas['nombre']."</option>";
+          foreach($area as $areas){
+          echo"<option value='".$areas['area_id']."'>".$areas['nombre']."</option>";
           }
           
           ?>
@@ -64,26 +51,32 @@
                     </div>
                   </div>
                 </div>
-      <div class="form-group">
-      <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            Profesional de proyectos 
-      </label>
+            <div class="control-group">
+              <label class="control-label">Boletin?</label>
+              <div class="controls">
+                <label>
+              <input class="form-check-input" name="boletin" type="checkbox" value="1">    
+              </div>
+            </div>
 
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Profesional estrategico
-            </label>
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Auxiliar Administrativo
-            </label>
+          <div class="control-group">
+              <label class="control-label">Roles</label>
+              <div class="controls">
+                <label>
+                  <div><input type="checkbox" name="radios"></div>
+                  Administrador</label>
+                <label>
+                  <div><input type="checkbox" name="radios"></div>
+                  Jefe de proyectos</label>
+                <label>
+                  <div><input type="checkbox" name="radios"></div>
+                  Ventas</label>
+              </div>
 
-
-    </div>
-  </div  >  
-      <button type="submit" class="btn btn-success">Guardar</button>
+               <div class="pull-right">
+               <button type="submit" class="btn btn-success">Guardar</button>
+               </div>
+            </div>
             </div>
           </form>
         </div>

@@ -6,20 +6,20 @@
                 <!-- /.col-lg-12 -->
 </div>
 <?php
-	foreach ($empleadoedit as $key => $empleado){
+	foreach ($empleadoedit as $key => $empleadoe){
 ?>
 
 		<form method="post" action="<?php echo getUrl("Parametros","Empleados", "postEditar");?>" name ="EditarCliente">
 					<div class="col-lg-7">
 						<div class="from-group">
 								<label>Nombre</label>
-								<input class="form-control" placeholder="<?php echo $empleado['empleado_id'];?>" name="empleado_id" value="<?php echo $empleado['empleado_id'];?>" readonly>
+								<input class="form-control" placeholder="<?php echo $empleadoe['empleado_id'];?>" name="empleado_id" value="<?php echo $empleadoe['empleado_id'];?>" readonly>
 						</div>
 					</div>
 					<div class="col-lg-7">
 						<div class="from-group">
 								<label>email</label>
-								<input class="form-control" placeholder="<?php echo $empleado['Nombre'];?>" name="nombre" value="<?php echo $empleado['nombre'];?>">
+								<input class="form-control" placeholder="<?php echo $empleadoe['Nombre'];?>" name="nombre" value="<?php echo $empleadoe['nombre'];?>">
 						</div>
 					</div>
 					<div class="col-lg-7">
@@ -44,7 +44,14 @@
 					 <label for="exampleFormControlTextarea1">Descripcion</label>
 					 <textarea class="form-control" id="exampleFormControlTextarea1"  name="descripcion" rows="3"></textarea>
 				</div>
-					</div>
+			<div class="control-group">
+              <label class="control-label">Boletin?</label>
+              <div class="controls">
+                <label>
+              <input class="form-check-input" name="boletin" type="checkbox" value="1">    
+              </div>
+            </div>
+		   </div>
 					<div class="col-lg-7">
 						<div class="from-group">
 								<button type="submit" class="btn btn-success">Enviar</button>

@@ -7,25 +7,27 @@
                 <!-- /.col-lg-12 -->
 </div>
 <?php
-	foreach ($empleadoeli as $key => $empleado){
+	foreach ($empleadoeli as $key => $empleadoel){
 ?>
 <table>
-				<form method="post" action="<?php echo getUrl("Parametros","Empleados", "postEliminar");?>" name ="eliminar">
+		<form method="post" action="<?php echo getUrl("Parametros","Empleados", "postEliminar");?>" name ="eliminar">
 				<td>
 								<label>Codigo del usuario</label>
-								<input class="form-control" placeholder="<?php echo $empleado['empleado_id'];?>" name="empleado_id" value="<?php echo $empleado['empleado_id'];?>" readonly>
+								<input class="form-control" placeholder="<?php echo $empleadoel['empleado_id'];?>" name="empleado_id" value="<?php echo $empleadoel['empleado_id'];?>" readonly>
 				</td>
-					<td>
+				<td>
 								<label>nombre del usuario</label>
-								<input class="form-control" placeholder="<?php echo $empleado['email'];?>" name="email" value="<?php echo $empleado['nombre'];?>" readonly>
-					</td>
-						
-				
-
-					<button type="submit" class="btn btn-success">Enviar</button>
+								<input class="form-control" placeholder="<?php echo $empleadoel['nombre'];?>" name="nombre" value="<?php echo $empleadoel['nombre'];?>" readonly>
+				</td>
+                      
+                 <tr class="pull-right">
+					<td>
+						<td class="from-group">
+								<button type="submit" class="btn btn-danger">Eliminar</button>
+						</td>
+					</td>	
+				</tr>
 				</form>
-
-
 				</table>
 </tr>
 	<?php }?>
